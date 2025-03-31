@@ -8,8 +8,9 @@ data_dir = os.path.join(current_dir, 'data')
 os.makedirs(data_dir, exist_ok=True)
 
 caminho_pdf = './web_scraping/downloads/Anexo_I_Rol_2021RN_465.2021_RN627L.2024.pdf'
+nome_csv = os.path.join(data_dir, "Teste_Joao_Sady.csv")
 
-def processar_pdf(caminho_pdf):
+def processar_pdf(caminho_pdf, nome_csv):
     dados = []
     
     with pdfplumber.open(caminho_pdf) as pdf:
@@ -26,10 +27,9 @@ def processar_pdf(caminho_pdf):
     df["Seg. Odontológica"] = df["Seg. Odontológica"].replace({"OD": "Seg. Odontológica"})
     df["Seg. Ambulatorial"] = df["Seg. Ambulatorial"].replace({"AMB": "Seg. Ambulatorial"})
    
-    df.to_csv("teste.csv", index=False, encoding='utf-8')
- 
+    df.to_csv(nome_csv, index=False, encoding='utf-8')
     
-    print(f"Foi")
+    print(f"Processamento concluído. CSV salvo em {nome_csv}.")
 
-processar_pdf(caminho_pdf)
+processar_pdf(caminho_pdf, nome_csv)
 
