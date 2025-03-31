@@ -9,8 +9,9 @@ os.makedirs(data_dir, exist_ok=True)
 
 caminho_pdf = './web_scraping/downloads/Anexo_I_Rol_2021RN_465.2021_RN627L.2024.pdf'
 nome_csv = os.path.join(data_dir, "Teste_Joao_Sady.csv")
+nome_zip = os.path.join(data_dir, "Teste_Joao_Sady.zip")
 
-def processar_pdf(caminho_pdf, nome_csv):
+def processar_pdf(caminho_pdf, nome_csv, nome_zip):
     dados = []
     
     with pdfplumber.open(caminho_pdf) as pdf:
@@ -29,7 +30,10 @@ def processar_pdf(caminho_pdf, nome_csv):
    
     df.to_csv(nome_csv, index=False, encoding='utf-8')
     
-    print(f"Processamento concluído. CSV salvo em {nome_csv}.")
+    with zipfile.ZipFile(os.path.join(data_dir, 'Teste_Joao_Sady.zip'), 'w') as zipf:
+        zipf.write(nome_csv, "Teste_Joao_Sady.csv")
+    
+    print(f"Processamento concluído. CSV salvo em {nome_csv} e compactado como {nome_zip}.")
 
-processar_pdf(caminho_pdf, nome_csv)
+processar_pdf(caminho_pdf, nome_csv, nome_zip)
 
