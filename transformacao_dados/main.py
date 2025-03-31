@@ -21,6 +21,10 @@ def processar_pdf(caminho_pdf):
     
     colunas = dados[0]  
     df = pd.DataFrame(dados[1:], columns=colunas)
+
+    df.rename(columns={"OD": "Seg. Odontológica", "AMB": "Seg. Ambulatorial"}, inplace=True)
+    df["Seg. Odontológica"] = df["Seg. Odontológica"].replace({"OD": "Seg. Odontológica"})
+    df["Seg. Ambulatorial"] = df["Seg. Ambulatorial"].replace({"AMB": "Seg. Ambulatorial"})
    
     df.to_csv("teste.csv", index=False, encoding='utf-8')
  
