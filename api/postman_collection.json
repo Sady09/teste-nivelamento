@@ -1,0 +1,34 @@
+{
+  "info": {
+    "name": "API Teste - Buscar Operadora",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Buscar Operadora",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/buscar/?query=operadora",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "buscar",
+            ""
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "operadora"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
