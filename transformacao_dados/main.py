@@ -13,13 +13,17 @@ nome_zip = os.path.join(data_dir, "Teste_Joao_Sady.zip")
 
 def processar_pdf(caminho_pdf, nome_csv, nome_zip):
     dados = []
-    
-    with pdfplumber.open(caminho_pdf) as pdf:
-        for pagina in pdf.pages:
-            tabelas = pagina.extract_tables()  
-            for tabela in tabelas:
-                for linha in tabela:  
-                    dados.append(linha)
+
+    try:
+        with pdfplumber.open(caminho_pdf) as pdf:
+            for pagina in pdf.pages:
+                tabelas = pagina.extract_tables()  
+                for tabela in tabelas:
+                    for linha in tabela:  
+                        dados.append(linha)
+    except:
+        print("Execute o web scraping primeiro")
+        return
     
     colunas = dados[0]  
     df = pd.DataFrame(dados[1:], columns=colunas)
