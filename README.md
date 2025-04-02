@@ -1,111 +1,111 @@
-# Projetos de Análise e Processamento de Dados
+📊 Projetos de Análise e Processamento de Dados
 
-## Descrição
+📌 Descrição
 
 Este documento descreve uma série de projetos focados em análise e processamento de dados. Cada projeto aborda uma área específica, como web scraping, transformação de dados, criação de APIs e integração de banco de dados.
 
-## Projetos
+🚀 Projetos
 
-### 1. Web-Scraping com PDFPlumber e Beautiful Soup
+1️⃣ Web-Scraping com PDFPlumber e Beautiful Soup
 
-Este projeto tinha como objetivo realizar web scraping de documentos PDF utilizando a biblioteca PDFPlumber e de páginas web utilizando Beautiful Soup. A intenção era extrair informações específicas de PDFs e páginas HTML para posterior análise e processamento.
+📌 Objetivo:
+Realizar web scraping de documentos PDF utilizando a biblioteca PDFPlumber e de páginas web utilizando Beautiful Soup. A intenção era extrair informações específicas de PDFs e páginas HTML para posterior análise e processamento.
 
-#### Desafios Encontrados
-Apesar das tentativas de extrair dados de PDFs e páginas web, não consegui obter os resultados esperados. As dificuldades incluíam a formatação inconsistente dos dados nos PDFs e a complexidade das estruturas HTML das páginas web.
+🔧 Dependências
 
-#### Dependências
-- pdfplumber
-- beautifulsoup4
-- requests
+pdfplumber
 
-#### Como Baixar as Dependências
+beautifulsoup4
 
-1. Crie um ambiente virtual (opcional, mas recomendado):
+requests
 
-```bash
+📥 Como Baixar as Dependências
+
+Crie um ambiente virtual (opcional, mas recomendado):
+
 python -m venv venv
 source venv/bin/activate  # No Windows use `venv\Scripts\activate`
-```
 
-2. Instale as dependências:
+Instale as dependências:
 
-```bash
 pip install pdfplumber beautifulsoup4 requests
-```
 
-### 2. Transformação de Dados com Pandas
+2️⃣ Transformação de Dados com Pandas
 
-Neste projeto, o objetivo foi transformar dados de arquivos CSV utilizando a biblioteca Pandas em Python. Foram realizadas diversas operações de limpeza e transformação nos dados para prepará-los para análise.
+📌 Objetivo:
+Transformar dados de arquivos CSV utilizando a biblioteca Pandas em Python. Foram realizadas diversas operações de limpeza e transformação nos dados para prepará-los para análise.
 
-#### Desafios Encontrados
-Embora várias abordagens tenham sido tentadas, não consegui integrar corretamente os diversos arquivos CSV que vieram separados e formatá-los de forma adequada. As dificuldades envolveram a padronização dos dados, tratamento de valores faltantes e a unificação dos diversos arquivos em uma única estrutura de dados coesa.
+🔧 Dependências
 
-#### Dependências
-- pandas
+pandas
 
-#### Como Baixar as Dependências
+📥 Como Baixar as Dependências
 
-1. Crie um ambiente virtual (opcional, mas recomendado):
+Crie um ambiente virtual (opcional, mas recomendado):
 
-```bash
 python -m venv venv
 source venv/bin/activate  # No Windows use `venv\Scripts\activate`
-```
 
-2. Instale as dependências:
+Instale as dependências:
 
-```bash
 pip install pandas
-```
 
-### 3. API com FastAPI
+3️⃣ API com FastAPI e Front-end com Vue.js
 
-O projeto de API utilizou FastAPI para criar um backend que fornecesse um sistema de busca de operadoras de saúde a partir de um arquivo CSV. A ideia era disponibilizar uma interface de programação para realizar consultas e obter dados de forma estruturada.
+📌 Objetivo:
+Este projeto é uma aplicação fullstack, utilizando FastAPI no back-end e Vue.js no front-end. O objetivo é fornecer um sistema de busca de operadoras de saúde a partir de um arquivo CSV. A ideia é disponibilizar uma interface de programação para realizar consultas e obter dados de forma estruturada.
 
-#### Desafios Encontrados
-Não foi possível concluir a implementação da API devido a dificuldades na integração dos dados e na configuração correta do backend.
+🔧 Dependências
 
-#### Dependências
-- fastapi
-- uvicorn
+fastapi
 
-#### Como Baixar as Dependências
+uvicorn
 
-1. Crie um ambiente virtual (opcional, mas recomendado):
+Vue.js (frontend)
 
-```bash
+Node.js e npm/yarn para gerenciar pacotes do Vue
+
+📥 Como Baixar as Dependências e Executar o Projeto
+
+Crie um ambiente virtual (opcional, mas recomendado) e instale as dependências do backend:
+
 python -m venv venv
 source venv/bin/activate  # No Windows use `venv\Scripts\activate`
-```
 
-2. Instale as dependências:
+Instale as dependências do backend:
 
-```bash
 pip install fastapi uvicorn
-```
 
-3. Execute a aplicação backend:
+Execute a aplicação backend:
 
-```bash
 uvicorn main:app --reload
-```
 
-### 4. Banco de Dados Incompleto
+Instale as dependências do frontend e execute o servidor Vue:
 
-Este projeto visava a criação de um banco de dados estruturado para armazenar e consultar os dados das operadoras de saúde. A ideia era desenvolver queries para estruturar as tabelas necessárias e importar o conteúdo dos arquivos CSV preparados.
+cd frontend
+npm install  # Ou `yarn install` se estiver usando Yarn
+npm run dev  # Ou `yarn dev`
 
-#### Desafios Encontrados
-O projeto do banco de dados ficou incompleto, pois não consegui integrar corretamente os diversos arquivos CSV e criar uma estrutura de dados coesa. Além disso, houve dificuldades na padronização dos dados e na elaboração de queries analíticas para responder às perguntas propostas.
+✅ O front-end estará disponível em http://localhost:5173 (ou outra porta especificada pelo Vue).
 
-## Como Baixar os Arquivos do Projeto
+4️⃣ Banco de Dados Incompleto
 
-1. Clone o repositório para o seu ambiente local:
+📌 Objetivo:
+Criar um banco de dados estruturado para armazenar e consultar os dados das operadoras de saúde. A ideia era desenvolver queries para estruturar as tabelas necessárias e importar o conteúdo dos arquivos CSV preparados.
 
-```bash
+⚠️ Desafios Encontrados
+
+🚨 O projeto do banco de dados ficou incompleto, pois não consegui integrar corretamente os diversos arquivos CSV e criar uma estrutura de dados coesa. Além disso, houve dificuldades na padronização dos dados e na elaboração de queries analíticas para responder às perguntas propostas.
+
+📂 Como Baixar os Arquivos do Projeto
+
+Clone o repositório para o seu ambiente local:
+
 git clone https://github.com/Sady09/teste-nivelamento.git
 cd teste-nivelamento
-```
 
-## Licença
+📜 Licença
 
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter mais informações.
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter mais informações.
+
+🛠️ Desenvolvido com dedicação! 🚀
